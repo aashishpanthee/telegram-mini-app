@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ConnectButton } from 'thirdweb/react';
 import { client } from '../client';
 import { inAppWallet } from 'thirdweb/wallets';
@@ -36,6 +36,7 @@ export default function RockPaperScissor() {
   const [showPrize, setShowPrize] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [prizeClaimed, setPrizeClaimed] = useState<boolean>(false);
+  console.log(showPrize, showModal, prizeClaimed);
 
   const handleChoice = (playerChoice: Choice) => {
     const computerChoice = getComputerChoice();
@@ -53,6 +54,7 @@ export default function RockPaperScissor() {
   const claimPrize = () => {
     setShowModal(true);
   };
+  console.log(claimPrize);
   return (
     <div
       style={{
